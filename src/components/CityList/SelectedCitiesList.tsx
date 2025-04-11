@@ -11,7 +11,7 @@ import {
 import useCities from "../../hooks/useCities";
 import useCitySelectionStore from "../../store/citySelection";
 import useSettingsStore from "../../store/settings";
-import { convertCelsiusToFahrenheit } from "../../utils";
+import { getTemperatureDisplayValue } from "../../utils";
 
 const SelectedCitiesList: React.FC = () => {
   const { displayUnits } = useSettingsStore();
@@ -27,9 +27,7 @@ const SelectedCitiesList: React.FC = () => {
             <IonCard>
               <IonCardTitle>
                 {city.name}{" "}
-                {displayUnits === "celcius"
-                  ? city.temperature + " °C"
-                  : convertCelsiusToFahrenheit(city.temperature) + " °F"}
+                {getTemperatureDisplayValue(city.temperature, displayUnits)}
               </IonCardTitle>
             </IonCard>
           </IonItem>

@@ -18,7 +18,7 @@ import {
   getEmojiByState,
   getUVIndexCategory,
   getWindDirectionText,
-  convertCelsiusToFahrenheit,
+  getTemperatureDisplayValue,
 } from "../../utils";
 import {
   water,
@@ -41,14 +41,11 @@ const CityData: React.FC<CityDataProps> = ({ cityId }) => {
   const { displayUnits } = useSettingsStore();
   if (!city) return null;
   const weatherEmoji = getEmojiByState(city.state);
-  const temperature =
-    displayUnits === "celcius"
-      ? city.temperature + "°C"
-      : convertCelsiusToFahrenheit(city.temperature) + "°F";
-  const feelsLike =
-    displayUnits === "celcius"
-      ? city.feelsLike + "°C"
-      : convertCelsiusToFahrenheit(city.feelsLike) + "°F";
+  const temperature = getTemperatureDisplayValue(
+    city.temperature,
+    displayUnits,
+  );
+  const feelsLike = getTemperatureDisplayValue(city.feelsLike, displayUnits);
 
   return (
     <div className="city-data">
