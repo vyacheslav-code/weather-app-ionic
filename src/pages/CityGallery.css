@@ -1,0 +1,72 @@
+.gallery-page {
+    --background: var(--ion-background-color);
+}
+
+.city-swiper {
+    height: calc(100% - 40px);
+    width: 100%;
+}
+
+.city-slide {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+.city-slide-header {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.city-slide-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.list-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.list-button {
+    --border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    --padding-start: 0;
+    --padding-end: 0;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --background: var(--ion-color-primary);
+    --background-activated: var(--ion-color-primary-shade);
+}
+
+.list-button ion-icon {
+    font-size: 24px;
+    color: white;
+}
+
+/* Swiper pagination customization */
+.custom-bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--ion-color-primary-shade);
+    border-radius: 50%;
+    margin: 0 4px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+    background: var(--ion-color-primary);
+    width: 16px;
+    border-radius: 4px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 16px !important;
+}

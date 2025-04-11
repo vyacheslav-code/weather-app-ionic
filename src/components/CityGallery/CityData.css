@@ -1,0 +1,81 @@
+.city-data {
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.weather-summary-card {
+  margin-bottom: 16px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.weather-title {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-emoji {
+  font-size: 2.5rem;
+}
+
+.feels-like {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.weather-grid {
+  margin-bottom: 16px;
+}
+
+.detail-card {
+  height: 100%;
+  border-radius: 12px;
+  text-align: center;
+  padding: 8px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--ion-color-primary);
+}
+
+.detail-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.detail-list {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.detail-list ion-icon {
+  color: var(--ion-color-primary);
+  font-size: 1.3rem;
+}
+
+.detail-list h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.detail-list p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
